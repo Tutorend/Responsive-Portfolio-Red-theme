@@ -1,0 +1,378 @@
+:root {
+  --m-2: 1rem;
+  --m-3: 1.5rem;
+  --m-4: 2rem;
+  --m-5: 2.5rem;
+  --m-6: 3rem;
+  --m-8: 4rem;
+  --m-10: 5rem;
+  --m-container: 10rem;
+}
+
+/*///////// Utitility \\\\\\\\*/
+
+.red-dot {
+  color: red;
+}
+.tab {
+  margin: auto var(--m-2);
+}
+
+.to-top{
+   position:fixed;
+	width:40px;
+	height:40px;
+	bottom:40px;
+	right:40px;
+	background-color:rgba(214, 124, 124, 0.363);
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  transition: all 300ms;
+}
+.to-top:hover{
+  background-color: red;
+}
+
+/*///////// Utitility  END \\\\\\\\*/
+
+
+/* #### GENERAL #### */
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+
+/* ###### HEADER / NAV SECTION ##### */
+header {
+  margin: auto var(--m-8);
+}
+
+.container {
+  margin: auto var(--m-container);
+}
+
+.p-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: xx-large;
+  font-weight: 500;
+
+  font-family: "Jolly Lodger";
+}
+
+.nav-menu ul {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  list-style: none;
+}
+.nav-menu .nav-list a {
+  text-decoration: none;
+  font-size: x-large;
+  color: gray;
+}
+.nav-menu .contact-btn {
+  margin-left: var(--m-8);
+  background: #000;
+  padding: 1px var(--m-2);
+  border-radius: var(--m-2);
+  color: white;
+  transition: box-shadow 300ms;
+}
+
+.contact-btn:hover {
+  box-shadow: 0px 0px 20px 5px red;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item::before {
+  content: "";
+  transition: 300ms;
+  top: var(--m-3);
+  height: 5px;
+
+  position: absolute;
+  background-color: #f79588;
+  width: 0%;
+  bottom: 10px;
+}
+
+.nav-item:hover {
+  color: #000;
+}
+.nav-item:hover::before {
+  width: 100%;
+}
+
+.nav-toggle {
+  display: none;
+  cursor: pointer;
+}
+/*____ HEADER NAV END ____ */
+
+
+/* ########## HOME / HERO SECTION  */
+#home {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* .hero-left {
+  height: auto;
+  width: 100%;
+  position: relative;
+} */
+
+.hero-left::before {
+  content: "";
+  position: absolute;
+  z-index: -10;
+  top: 10rem;
+
+  width: 100%;
+  height: 100%;
+  background: url("assets/images/hero-bg.svg") no-repeat;
+}
+
+.hero-section .hero-title {
+  font-size: 50px;
+}
+
+.hero-section .hero-name {
+  color: red;
+}
+.hero-image img {
+  height: 500px;
+}
+
+.hero-description {
+  width: 400px;
+}
+
+.socials {
+  display: flex;
+  gap: var(--m-4);
+}
+
+
+.hero-section .cv-download {
+  background-color: red;
+  width: 150px;
+  border-radius: var(--m-2);
+  text-align: center;
+  font-size: large;
+  margin-top: var(--m-2);
+
+  color: white;
+}
+.cv-download a {
+  text-decoration: none;
+  color: white;
+}
+
+/* ##### ABOUT ME SECTION ###### */
+.about-me-top {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: var(--m-4);
+}
+.about-me-top h1 {
+  font-size: 50px;
+  margin-bottom: 0px;
+}
+.about-me-img {
+  text-align: center;
+  /* height: 200px; */
+  width: 500px;
+  margin: 0 auto;
+}
+.about-me-img img {
+  width: 100%;
+}
+
+
+
+/* ##### SERVICES SECTION */
+.services-grid {
+  display: flex;
+  justify-content: space-around;
+}
+
+.services-card {
+  width: 180px;
+  text-align: center;
+  padding: var(--m-2);
+
+  border-radius: 1rem;
+  transition: margin 500ms, box-shadow 500ms;
+  /* transition: margin 700ms; */
+}
+
+.services-card:hover {
+  margin-top: -10px;
+  box-shadow: 5px 15px 26px 11px rgba(208, 196, 196, 0.98);
+}
+
+
+
+
+
+/* ######## PROJECTS OR PORTFORLIO SECTION ####### */
+.projects {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+.project-card {
+  position: relative;
+}
+.project-card img {
+  height: 100%;
+  width: 100%;
+  border-radius: var(--m-2);
+  box-shadow: 0px 5px 16px 5px rgba(208, 196, 196, 0.98);
+  transition: box-shadow 300ms;
+}
+.project-card:hover img {
+  box-shadow: 0px 5px 16px 10px rgba(238, 107, 107, 0.98);
+}
+.project-detail {
+  opacity: 0%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.322);
+
+  font-size: x-large;
+  font-weight: 600;
+  position: absolute;
+  margin-top: -150px;
+  padding: var(--m-2);
+  transition: opacity 500ms;
+}
+
+.project-detail:hover {
+  opacity: 100%;
+}
+
+
+/* ##### CONTACT SECTION ##### */
+
+.contact {
+  text-align: center;
+}
+.bottom-social {
+  justify-content: center;
+}
+
+.footer {
+  text-align: center;
+}
+
+
+
+
+/* Responsiveness  FOR MOBILE DEVICES*/
+
+@media screen and (max-width: 780px) {
+
+  .container {
+    margin: auto var(--m-2);
+  }
+
+  /* *** HEADER NAV *** */
+  header {
+    margin:  var(--m-2);
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  
+  .nav-menu {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-list {
+    padding: var(--m-5);
+    border-radius: 10% 0 5px 5%;
+    position: relative;
+    flex-direction: column;
+    top: var(--m-5);
+    opacity: 0%;
+    top: -350px;
+    background: linear-gradient(rgba(250, 157, 157, 0.568),rgba(217, 232, 247, 0.911));
+    transition: all 300ms;
+  }
+
+  .show-menu {
+    top: 0;
+    opacity: 100%;
+    transition: top 400ms;
+  }
+
+  .nav-menu .contact-btn {
+    margin: auto;
+    margin-left: -10px;
+    background: #000;
+    padding: 1px var(--m-2);
+    border-radius: var(--m-2);
+    color: white;
+    transition: box-shadow 300ms;
+  }
+
+
+  /* *** HERO SECTION*** */
+  #home {
+    flex-direction: column-reverse;
+    margin-top: -200px;
+  }
+
+  
+  .hero-description {
+    width: auto;
+  }
+
+  .hero-image img {
+    height: auto;
+    width: 100%;
+  }
+  
+  /* ***ABOUT ME SECTINO*** */
+  .about-me-img {
+    width: auto;
+  }
+
+  
+  /* **SERVICES SECTION** */
+  .services-grid {
+    flex-direction: column;
+    margin: auto;
+  }
+  
+  .services-card {
+    width: auto;
+  }
+
+
+  .projects {
+    flex-direction: column;
+  }
+
+  
+
+
+}
